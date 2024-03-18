@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .nav-header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .container {
+            margin-top: 100px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-header">
+        <a href="index.html">Back to Home Page</a>
+    </div>
+    
+    <div class="container">
+        <h1>Form Submission Details</h1>
+        <div class="card">
+            <p><strong>Name:</strong> <span id="submittedName"></span></p>
+            <p><strong>Email:</strong> <span id="submittedEmail"></span></p>
+            <p><strong>Message:</strong> <span id="submittedMessage"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        var name = localStorage.getItem("name");
+        var email = localStorage.getItem("email");
+        var message = localStorage.getItem("message");
+
+        // Display form data
+        document.getElementById("submittedName").innerText = name;
+        document.getElementById("submittedEmail").innerText = email;
+        document.getElementById("submittedMessage").innerText = message;
+    </script>
+</body>
+</html>
